@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(routes);
+app.use(routes); // Use the combined routes
 
 // Sync Sequelize models to the database and start the server
 sequelize.sync({ force: false }).then(() => {
