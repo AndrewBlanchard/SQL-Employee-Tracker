@@ -5,5 +5,15 @@
     "inquirer": "^8.2.4",
     "mysql2": "^3.9.7",
     "sequelize": "^6.37.3"
-  }
+  },
+  "name": "sql-employee-tracker",
+  "description": "## Your Task",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
