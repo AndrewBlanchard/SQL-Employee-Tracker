@@ -34,22 +34,22 @@ async function promptUser() {
     case 'View all employees':
       await viewAllEmployees();
       break;
-    case 'Add a department':
-      const { departmentName } = await inquirer.prompt([
-        {
-          type: 'input',
-          name: 'departmentName',
-          message: 'Enter the department name:',
-          validate: (input) => {
-            if (input.trim() === '') {
-              return 'Please enter a valid department name.';
-            }
-            return true;
+      case 'Add a department':
+        const { departmentName } = await inquirer.prompt([
+          {
+            type: 'input',
+            name: 'departmentName',
+            message: 'Enter the department name:',
+            validate: (input) => {
+              if (input.trim() === '') {
+                return 'Please enter a valid department name.';
+              }
+              return true;
+            },
           },
-        },
-      ]);
-      await addDepartment();
-      break;
+        ]);
+        await addDepartment(departmentName);
+        break;
     case 'Add a role':
       const { title, salary, departmentId } = await inquirer.prompt([
         {
