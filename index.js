@@ -172,6 +172,17 @@ async function promptUser() {
       return;
   }
 
+  const { updateDepartment } = require('./lib/departmentQueries');
+
+// Update department with ID 1 to have a new name
+updateDepartment(1, 'New Department Name')
+  .then((affectedRows) => {
+    console.log(`\n${affectedRows} department(s) updated.`);
+  })
+  .catch((error) => {
+    console.error('Error updating department:', error);
+  });
+
   promptUser();
 }
 
